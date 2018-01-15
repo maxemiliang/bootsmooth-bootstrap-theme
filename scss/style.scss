@@ -1,0 +1,71 @@
+/*!
+Theme Name: Bootsmooth Bootstrap
+Theme URI: http://bootsmooth.com/wordpress-theme/
+Author: Clarence Pearson
+Author URI:  http://bootsmooth.com/author
+Description: WordPress Theme for Developers
+Version: 1.1.0
+License: MIT License 
+License URI: http://bootsmooth.com/license
+Text Domain: 
+Tags:
+*/
+
+
+// Import variables
+@import "variables.scss";
+
+// Import bootstrap.
+@import "bootstrap/scss/bootstrap.scss";
+
+@import "ui";
+
+// main
+main {
+	margin-bottom: 3em;
+}
+
+
+// footer
+
+footer.page-footer {
+	@extend .p-3;
+	@extend .bg-light;
+}
+
+// sidebar
+.sidebar-widget {
+
+	form div {
+		@extend .form-group;
+	}
+
+	input[type="email"], input[type="search"], input[type="text"] {
+		@extend .form-control;
+		margin-bottom: .5rem;
+	}
+
+	input[type="submit"] {
+		@extend .btn;
+		@extend .btn-light;
+	}
+
+	ul {
+		@extend .list-group;
+
+		li {
+			@extend .list-group-item;
+		}
+	}
+}
+
+// banner widget area
+.banner-widget {
+	iframe, video, embed {
+		width: 100%;
+	}
+
+	img {
+		@extend .img-fluid;
+	}
+}

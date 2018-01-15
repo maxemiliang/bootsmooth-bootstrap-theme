@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{% if banner_widgets %}
+<div class="container">
+	{{ banner_widgets }}
+</div>
+{% endif %}
+
+<div class="container">
+	<div class="row posts-row">
+	{% for post in posts %}
+		<div class="col-sm-6">
+			{% include 'tease.twig' %}
+			<br>
+		</div>
+	{% endfor %}
+	</div>
+	{% if pagination %}
+	{% include 'pagination.twig' %}
+	{% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ parent() }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+// enable masonry on load
+document.addEventListener("DOMContentLoaded", function(event) { 
+    $('.posts-row').masonry({
+      itemSelector: '.col-sm-6',
+      percentPosition: true
+    });   
+});
+</script>
+{% endblock %}

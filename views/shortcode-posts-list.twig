@@ -1,0 +1,5 @@
+<div class="list-group">
+{% for post in blogs %}
+    <a class="list-group-item list-group-item-action" href="{{post.link}}">{{post.title}}</a>
+{% endfor %}
+</div>

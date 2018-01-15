@@ -1,0 +1,14 @@
+<footer class="page-footer">
+	<div class="container">
+		<ul class="list-inline">
+		{% for item in menu.get_items %}
+		<li class="list-inline-item">
+			<a href="{{item.get_link}}">{{item.title}}</a>
+		</li>
+		{% endfor %}
+		</ul>
+    	<div class="footer-info">
+        	<span class="site-title">{{site.title}}</span> | <soan class="copyright">Copyright &copy; {{ "now"|date("Y") }}</span>
+        <div>
+    </div>
+</footer>

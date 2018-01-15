@@ -1,0 +1,17 @@
+{% block content %}
+<div class="card">
+	{% if post.get_thumbnail %}
+	<img class="card-img-top" src="{{post.thumbnail.src}}" alt="{{post.title}}" />
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title"><a href="{{post.link}}">{{post.title}}</a></h5>
+		<div class="h6">{{ post.post_date|date('F j, Y') }} | {{ post.terms('category') | join(', ') }}</div>
+        <p class="card-text">			
+			{{post.post_content|excerpt(40)}}...
+		</p>
+        <p>
+			<a class="btn btn-outline-primary" href="{{post.link}}">Read</a>
+		</p>
+    </div>
+</div>
+{% endblock %}
