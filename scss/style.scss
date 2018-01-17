@@ -20,6 +20,17 @@ Tags:
 
 @import "ui";
 
+
+
+// nav
+.navbar-nav {
+	li.current_page_item {
+		a.nav-link {
+			@extend .active;
+		}
+	}
+}
+
 // main
 main {
 	margin-bottom: 3em;
@@ -60,6 +71,10 @@ footer.page-footer {
 }
 
 // banner widget area
+.banner_widget_area {
+	@extend .pt-5;
+	@extend .pb-5;
+}
 .banner-widget {
 	iframe, video, embed {
 		width: 100%;

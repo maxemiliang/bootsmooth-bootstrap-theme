@@ -1,13 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-{% if banner_widgets %}
-<div class="container">
-	{{ banner_widgets }}
-</div>
-{% endif %}
 
 <div class="container">
+	{% if banner_widgets %}
+	<div class="banner_widget_area">
+		{{ banner_widgets }}
+	</div>
+	{% endif %}
+
 	<div class="row posts-row">
 	{% for post in posts %}
 		<div class="col-sm-6">
