@@ -14,19 +14,22 @@
  * Timber 0.1
  */
 
-global $paged;
 $context = Timber::get_context();
+
+$posts_per_page = get_option('posts_per_page');
 
 $context['posts'] = Timber::get_posts( 
 	array(
-		'posts_per_page' => 9,
+		'posts_per_page' => $posts_per_page,
 		'paged' => $paged
 	)
 );
 $post = new TimberPost();
- 
+$context['title'] =  get_the_title( $post->ID );
 $context['pagination'] = Timber::get_pagination();
-
+$context['paged'] = $paged;
 $templates = array( 'index.twig' );
-
+if ( is_home() ) {
+	array_unshift( $templates, 'home.twig' );
+}
 Timber::render( $templates, $context );

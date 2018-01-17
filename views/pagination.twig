@@ -1,4 +1,4 @@
-<nav aria-label="Blog post navigtion">
+<nav class="d-flex justify-content-center" aria-label="Blog post navigtion">
 <ul class="pagination">
     {% if pagination.prev %}
     <li class="page-item">
@@ -6,13 +6,15 @@
     </li>
     {% endif %}
     {% for page in pagination.pages %}
-    <li class="page-item">
-        {% if page.link %}
+   		{% if page.link %}
+		<li class="page-item">
             <a href="{{page.link}}"  class="page-link">{{page.title}}</a>
-        {% else %}
-            <span class="{{page.class}}">{{page.title}}</span>
+		</li>
+		{% else %}
+		<li class="page-item disabled">
+            <a href="#"  class="page-link">{{page.title}}</a>
+		</li>
         {% endif %}
-    </li>
     {% endfor %}
     {% if pagination.next %}
     <li class="page-item">
