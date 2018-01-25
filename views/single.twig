@@ -8,7 +8,7 @@
 			<h1 class="display-4">{{post.title}}</h1>
 			<p class="post-meta">Posted on {{post.date | date}} by {{ post.author.name }} | {{ post.terms('category') | join(', ') }}</p>
 			{% if post.get_thumbnail %}
-			<img src="{{post.thumbnail.src}}" class="img-fluid" alt="{{post.title}}">
+			<img src="{{post.thumbnail.src}}" class="img-fluid mb-2" alt="{{post.title}}">
 			{% endif %}
 			<article>
 				{{post.content}}
