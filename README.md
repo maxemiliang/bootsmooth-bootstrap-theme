@@ -1,6 +1,6 @@
 # Bootsmooth Bootstap Wordpress Theme
 
-A Wordpress Starter Theme built with [Bootstrap 4](https://https://getbootstrap.com/.com/) and the [Timber Starter Theme](https://github.com/timber/starter-theme).
+A Wordpress Starter Theme built with [Bootstrap 4](https://getbootstrap.com/.com/) and the [Timber Starter Theme](https://github.com/timber/starter-theme).
 
 ## Installation and setup
 
