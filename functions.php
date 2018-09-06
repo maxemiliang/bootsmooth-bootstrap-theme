@@ -71,6 +71,7 @@ function register_theme_features() {
 	if ( function_exists('register_sidebar') ) {
 		register_sidebar(array(
 			'name' => 'Single Post Sidebar',
+			'id' => 'single_post_side',
 			'before_widget' => '<div class="sidebar-widget">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5 class="usa-heading-alt">',
@@ -80,6 +81,7 @@ function register_theme_features() {
 
 		register_sidebar(array(
 			'name' => 'Archive Banner',
+			'id' => 'archive_banner',
 			'before_widget' => '<div class="banner-widget">',
 			'after_widget' => '</div>',
 			'before_title' => '<div>',
